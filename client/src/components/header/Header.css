@@ -1,0 +1,7 @@
+.header{
+    background-color: var(--medium-dark);
+}
+.h1{
+    padding: 13px;
+    color: var(--dark-red);
+}

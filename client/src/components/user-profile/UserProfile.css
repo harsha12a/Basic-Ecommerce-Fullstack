@@ -1,0 +1,11 @@
+.fle{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 60px auto;
+    flex-wrap: wrap;
+    background-color: #f8f8f8;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    box-shadow: 2px 2px 40px ;
+}
