@@ -6,7 +6,7 @@ const app=exp()
 const cors=require('cors')
 
 app.use(cors({
-    origin:'http://localhost:5173'
+    origin:'https://basic-ecomm-app.netlify.app/'
 }))
 
 require('dotenv').config()
