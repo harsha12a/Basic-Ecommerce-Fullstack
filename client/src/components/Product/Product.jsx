@@ -9,7 +9,7 @@ function Product(props) {
   let {curr,setcurr,seterr,setstat,token}=useContext(UserLoginContext)
   async function addToCart(obj) {
     let username=curr?.username
-    let res=await fetch(`http://localhost:3100/user-api/addToCart/${username}`, {
+    let res=await fetch(`https://ecommerce-api-six-hazel.vercel.app/user-api/addToCart/${username}`, {
       method:'PUT',
       headers: {
         'Content-Type': 'application/json',

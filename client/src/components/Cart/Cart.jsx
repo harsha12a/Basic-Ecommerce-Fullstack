@@ -9,7 +9,7 @@ function Cart() {
   let [cart,setCart]=useState([])
 
   async function getUserCart(){
-    let res=await fetch(`http://localhost:3100/user-api/cart/${curr?.username}`,{
+    let res=await fetch(`https://ecommerce-api-six-hazel.vercel.app//user-api/cart/${curr?.username}`,{
       method:'GET',
       headers:{
         "Content-Type":"application/json",

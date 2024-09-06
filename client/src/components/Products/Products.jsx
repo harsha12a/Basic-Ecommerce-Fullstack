@@ -5,7 +5,7 @@ import Product from '../Product/Product'
 function Products() {
   let [prods,setprod]=useState([])
   async function getproducts(){
-    let res=await fetch('http://localhost:3100/product-api/products')
+    let res=await fetch('https://ecommerce-api-six-hazel.vercel.app/product-api/products')
     let data=await res.json()
     setprod(data.payload)
   }

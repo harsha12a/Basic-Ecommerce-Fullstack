@@ -7,7 +7,7 @@ function UserLoginStore({children}) {
     let [err,seterr]=useState('')
     async function loginuser(obj){
         try{
-            let res=await fetch('http://localhost:3100/user-api/login',
+            let res=await fetch('https://ecommerce-api-six-hazel.vercel.app/user-api/login',
                 {
                     method:'POST',
                     headers:{

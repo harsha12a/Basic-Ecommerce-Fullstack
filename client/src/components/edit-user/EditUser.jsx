@@ -8,7 +8,7 @@ function EditUser() {
     let {register,handleSubmit,setValue,formState:{errors}}=useForm()
     let navigate=useNavigate()
     async function onsave(obj){
-        let res=await fetch('http://localhost:3100/user-api/updation',{
+        let res=await fetch('https://ecommerce-api-six-hazel.vercel.app//user-api/updation',{
             method:"PUT",
             headers:{
               "Content-Type":"application/json",
