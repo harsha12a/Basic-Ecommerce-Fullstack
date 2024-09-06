@@ -6,7 +6,7 @@ const app=exp()
 const cors=require('cors')
 
 app.use(cors({
-    origin:'https://basic-ecomm-app.netlify.app/'
+    origin:'https://basic-ecommerce-fullstack.vercel.app/'
 }))
 
 require('dotenv').config()
