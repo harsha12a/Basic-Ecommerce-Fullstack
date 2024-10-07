@@ -124,4 +124,4 @@ userApp.put('/removeCart/:id',tokenVerify,expressAsyncHandler(async(req,res)=>{
     res.send({message:"product removed from cart",payload:result})
 }))
 
-module.exports=userApp
+module.exports=userApp;
