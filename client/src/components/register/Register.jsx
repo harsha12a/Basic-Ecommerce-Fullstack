@@ -8,7 +8,7 @@ function Register() {
   let navigate=useNavigate()
   async function handleform(obj){
     try{
-      let res=await fetch('https://ecommerce-api-six-hazel.vercel.app/user-api/user',{
+      let res=await fetch('https://basic-ecommerce-fullstack-vwwt.vercel.app/user-api/user',{
         method:'POST',
         headers:{
           'Content-Type':'application/json'
