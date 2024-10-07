@@ -10,7 +10,7 @@ require('dotenv').config()
 
 //create sample rest api(req handlers routes)
  //route for get users(protected route)
-userApp.get('/users',expressAsyncHandler(async (req,res)=>{
+userApp.get('/users',tokenVerify,expressAsyncHandler(async (req,res)=>{
     const userCollection=req.app.get('userCollection')
     let users=await userCollection.find().toArray()
     res.send({message:"all users",payload:users})

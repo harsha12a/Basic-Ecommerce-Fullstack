@@ -6,7 +6,7 @@ const app=exp()
 const cors=require('cors')
 
 app.use(cors({
-    origin:'https://basic-ecommerce-fullstack.vercel.app/'
+    origin:'*'
 }))
 
 require('dotenv').config()
