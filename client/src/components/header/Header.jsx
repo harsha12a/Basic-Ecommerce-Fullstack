@@ -12,7 +12,7 @@ import './Header.css'
 import {Link} from 'react-router-dom'
 function Header() {
   let {logoutuser,stat}=useContext(UserLoginContext)
-  let statUser=JSON.parse(localStorage.getItem('loginDetails'))===null?false:true
+  let statUser=JSON.parse(sessionStorage.getItem('loginDetails'))===null?false:true
   return (
     <div>
       <div className='d-flex flex-wrap justify-content-around header'>

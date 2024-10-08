@@ -7,7 +7,7 @@ function EditUser() {
     let {curr,setcurr,seterr,setstat,token}=useContext(UserLoginContext)
     let {register,handleSubmit,setValue,formState:{errors}}=useForm()
     let navigate=useNavigate()
-    let currUser = JSON.parse(localStorage.getItem('loginDetails'));
+    let currUser = JSON.parse(sessionStorage.getItem('loginDetails'));
     async function onsave(obj){
         let res=await fetch('https://basic-ecommerce-fullstack-vwwt.vercel.app/user-api/updation',{
             method:"PUT",
@@ -20,7 +20,7 @@ function EditUser() {
         let data=await res.json()
         if(data.message==="User updated"){
             setcurr(obj)
-            localStorage.setItem('loginDetails',JSON.stringify(obj))
+            sessionStorage.setItem('loginDetails',JSON.stringify(obj))
             navigate('/user-profile')
         }
         else if(data.message==="token expired.Plz relogin to continue"){

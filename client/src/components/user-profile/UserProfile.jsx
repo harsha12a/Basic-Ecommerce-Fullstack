@@ -9,7 +9,7 @@ import {CiEdit} from "react-icons/ci"
 import { Outlet } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 function UserProfile() {
-  let curr = JSON.parse(localStorage.getItem('loginDetails'))
+  let curr = JSON.parse(sessionStorage.getItem('loginDetails'))
   let navigate=useNavigate()
   function edituser(){
     navigate('../edit-user')
