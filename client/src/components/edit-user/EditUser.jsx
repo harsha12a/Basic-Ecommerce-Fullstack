@@ -20,6 +20,7 @@ function EditUser() {
         let data=await res.json()
         if(data.message==="User updated"){
             setcurr(obj)
+            localStorage.setItem('loginDetails',JSON.stringify(obj))
             navigate('/user-profile')
         }
         else if(data.message==="token expired.Plz relogin to continue"){
