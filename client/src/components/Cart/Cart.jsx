@@ -24,7 +24,7 @@ function Cart() {
   },[])
   
   async function deleteitem(prodid){
-    let res=await fetch(`http://localhost:3100/user-api/removeCart/${prodid}`,{
+    let res=await fetch(`https://basic-ecommerce-fullstack-vwwt.vercel.app/user-api/removeCart/${prodid}`,{
       method:'PUT',
       headers:{
         "Content-Type":"application/json",
@@ -43,6 +43,7 @@ function Cart() {
       navigate('/login')
     }
   }
+  cart = [...cart].sort((a, b) => a.price - b.price);
   return (
     <div>
       {
@@ -65,7 +66,8 @@ function Cart() {
                 <td>{item.title}</td>
                 <td>{item.price}</td>
                 <td>{item.brand}</td>
-                <button className="btn btn-danger"><MdDeleteOutline className='fs-4 text-danger' onClick={()=>deleteitem(item.id)}/></button>
+                <td>
+                <button className="btn"><MdDeleteOutline className='fs-4 text-danger' onClick={()=>deleteitem(item.id)}/></button></td>
               </tr>
             ))
           }

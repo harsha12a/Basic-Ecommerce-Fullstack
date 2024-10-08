@@ -21,7 +21,7 @@ function UserLoginStore({children}) {
                 setcurr(data.user)
                 setstat(true)
                 seterr('')
-                sessionStorage.setItem('token',data.token)
+                localStorage.setItem('loginDetails',JSON.stringify(data.user))
                 setToken(data.token)
             }
             else{
@@ -37,7 +37,7 @@ function UserLoginStore({children}) {
         setcurr({})
         setstat(false)
         seterr('')
-        sessionStorage.removeItem('token')
+        localStorage.removeItem('loginDetails')
     }
   return (
     <UserLoginContext.Provider value={{loginuser,logoutuser,stat,setstat,err,seterr,curr,setcurr,token}}>
